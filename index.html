@@ -3,29 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Management System</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>SCMIRT Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        header {
+            background: #003366;
+            color: #ffffff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 150px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #f4f4f4;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #003366;
+            color: #ffffff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to the Library Management System</h1>
+        <img src="https://scmirt.org/wp-content/uploads/2022/10/logo-scmirt316.png" height="" alt="SCMIRT Logo">
+        <h1>Welcome to SCMIRT Library Management System</h1>
         <nav>
             <ul>
-                <li><a href="php/login.php">Login</a></li>
-                <li><a href="php/register.php">Register</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-        <section>
-            <h2>About Our Library</h2>
-            <p>Discover books, borrow them, and manage your library account effortlessly.</p>
-        </section>
-    </main>
-
+    
+    <section id="about">
+        <h2>About SCMIRT Library</h2>
+        <p>The SCMIRT Library Management System helps students and faculty manage books, track issues, and access digital resources efficiently.</p>
+    </section>
+    
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Search and borrow books online</li>
+            <li>Track due dates and return books</li>
+            <li>Access digital resources</li>
+            <li>User-friendly dashboard</li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: library@scmirt.edu | Phone: +91 12345 67890</p>
+    </section>
+    
     <footer>
-        <p>&copy; 2025 Library Management System</p>
+        <p>&copy; 2025 SCMIRT Library. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
