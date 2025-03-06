@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCMIRT Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .signup-container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 320px;
+        }
+        h2 {
+            color: #003366;
+        }
+        .signup-container select,
+        .signup-container input[type="text"],
+        .signup-container input[type="email"],
+        .signup-container input[type="password"],
+        .signup-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .signup-container button {
+            background-color: #003366;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .signup-container button:hover {
+            background-color: #002244;
+        }
+        .login-link {
+            font-size: 14px;
+            display: block;
+            margin-top: 10px;
+            color: #003366;
+            text-decoration: none;
+        }
+        .login-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleProgramField() {
+            var role = document.getElementById("role").value;
+            var programField = document.getElementById("program-field");
+            if (role === "student") {
+                programField.style.display = "block";
+            } else {
+                programField.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>SCMIRT Sign Up</h2>
+        <form action="register.php" method="POST" onsubmit="redirectToLogin(event)">
+            <label for="role">Register as:</label>
+            <select id="role" name="role" required onchange="toggleProgramField()">
+                <option value="student">Student</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <div id="program-field" style="display: block;">
+                <label for="program">Program Name:</label>
+                <select id="program" name="program" required>
+                    <option value="BSc">BSc</option>
+                    <option value="BCom">BCom</option>
+                    <option value="BA">BA</option>
+                    <option value="BBA">BBA</option>
+                    <option value="BCA">BCA</option>
+                </select>
+            </div>
+
+            <input type="text" name="username" placeholder="Username" required autofocus>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <a href="login.html"><button type="submit">Sign Up</button></form></a>
+        </form>
+        <script>
+            function redirectToLogin(event) {
+            event.preventDefault(); // Prevent actual form submission
+            alert("Registration Successful! Redirecting to Login Page...");
+            window.location.href = "login.html"; // Redirect after successful sign-up
+        }
+        </script>
+        <a href="login.html" class="login-link">Already have an account? Log In</a>
+    </div>
+    
+</body>
+</html>
